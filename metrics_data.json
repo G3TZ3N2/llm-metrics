@@ -1,82 +1,536 @@
 {
-  "collectionStarted": "2026-04-30T00:00:00Z",
-  "totalSessions": 2,
-  "totalTokens": 1259000,
-  "daysTracked": 1,
-  "totalToolCalls": 170,
+  "totalSessions": 23,
+  "totalToolCalls": 453,
+  "totalInputTokens": 9775451,
+  "totalOutputTokens": 124092,
+  "totalCacheReadTokens": 1767714,
+  "totalCacheWriteTokens": 0,
+  "totalReasoningTokens": 0,
+  "totalApiCalls": 338,
+  "tokensGenerated": 124092,
+  "daysTracked": 5,
   "byModel": {
-    "custom/RedHatAI-Qwen3.6-35B-A3B-NVFP4": {
-      "sessions": 2,
-      "tokens": 1259000
+    "ykarout/Qwen3.5-9B-NVFP4": {
+      "sessions": 5,
+      "tool_calls": 82,
+      "input_tokens": 1911920,
+      "output_tokens": 14070
+    },
+    "unsloth/gemma-4-E2B-it-GGUF:UD-Q4_K_XL": {
+      "sessions": 1,
+      "tool_calls": 19,
+      "input_tokens": 12908,
+      "output_tokens": 5521
+    },
+    "Jackrong/Qwopus3.6-27B-v1-preview-GGUF:Q6_K": {
+      "sessions": 4,
+      "tool_calls": 56,
+      "input_tokens": 104935,
+      "output_tokens": 12025
+    },
+    "RedHatAI/Qwen3.6-35B-A3B-NVFP4": {
+      "sessions": 13,
+      "tool_calls": 296,
+      "input_tokens": 7745688,
+      "output_tokens": 92476
     }
   },
+  "byDay": {
+    "2026-04-17": {
+      "sessions": 3,
+      "tool_calls": 41,
+      "input_tokens": 837461,
+      "output_tokens": 6260
+    },
+    "2026-04-18": {
+      "sessions": 2,
+      "tool_calls": 41,
+      "input_tokens": 1074459,
+      "output_tokens": 7810
+    },
+    "2026-04-19": {
+      "sessions": 1,
+      "tool_calls": 19,
+      "input_tokens": 12908,
+      "output_tokens": 5521
+    },
+    "2026-04-29": {
+      "sessions": 4,
+      "tool_calls": 56,
+      "input_tokens": 104935,
+      "output_tokens": 12025
+    },
+    "2026-04-30": {
+      "sessions": 13,
+      "tool_calls": 296,
+      "input_tokens": 7745688,
+      "output_tokens": 92476
+    }
+  },
+  "toolCallBreakdown": {},
   "sessions": [
     {
-      "session_id": "20260430_120051",
-      "timestamp": "2026-04-30T12:00:51.792185+00:00",
-      "date": "2026-04-30",
-      "model": "custom/RedHatAI-Qwen3.6-35B-A3B-NVFP4",
-      "model_provider": "custom",
+      "session_id": "20260416_211235_f6e824",
+      "timestamp": "2026-04-17T01:12:49.062710+00:00",
+      "date": "2026-04-17",
+      "model": "ykarout/Qwen3.5-9B-NVFP4",
       "tool_calls": {
-        "total": 90,
-        "browser": 30,
-        "terminal": 25,
-        "write": 8,
-        "read": 5,
-        "patch": 3,
-        "execute_code": 4,
-        "gh": 10,
-        "memory": 2,
-        "skill": 3
+        "total": 6
       },
-      "session_tokens": 700000,
-      "total_tokens_generated": 700000,
-      "environment": {
-        "python_version": "Python 3.11.15",
-        "node_version": "v20.20.2",
-        "platform": "Docker/Linux",
-        "hermes_agent": true
-      },
-      "status": "complete"
+      "input_tokens": 84972,
+      "output_tokens": 485,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 0,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": null,
+      "source": "actual_counts",
+      "status": "cli_close"
     },
     {
-      "session_id": "20260430_121340_manual",
-      "timestamp": "2026-04-30T12:13:40.341372+00:00",
-      "date": "2026-04-30",
-      "model": "custom/RedHatAI-Qwen3.6-35B-A3B-NVFP4",
-      "model_provider": "custom",
+      "session_id": "20260416_211307_810dae",
+      "timestamp": "2026-04-17T01:13:07.622063+00:00",
+      "date": "2026-04-17",
+      "model": "ykarout/Qwen3.5-9B-NVFP4",
       "tool_calls": {
-        "skill_view": 4,
-        "search_files": 2,
-        "todo": 2,
-        "terminal": 16,
-        "process": 1,
-        "read_file": 5,
-        "session_search": 2,
-        "execute_code": 6,
-        "browser": 25,
-        "skill": 3,
-        "memory": 3,
-        "patch": 2,
-        "send_message": 0,
-        "cronjob": 1,
-        "gh": 8
+        "total": 13
       },
-      "session_tokens": 559000,
-      "total_tokens_generated": 129000,
-      "environment": {
-        "python_version": "Python 3.11.15",
-        "node_version": "v20.20.2",
-        "platform": "Docker/Linux",
-        "hermes_agent": true
+      "input_tokens": 174411,
+      "output_tokens": 2247,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 0,
+      "estimated_cost_usd": 0.0,
+      "end_reason": null,
+      "title": null,
+      "source": "actual_counts",
+      "status": "unknown"
+    },
+    {
+      "session_id": "20260416_233905_06bbf5",
+      "timestamp": "2026-04-17T03:39:09.989751+00:00",
+      "date": "2026-04-17",
+      "model": "ykarout/Qwen3.5-9B-NVFP4",
+      "tool_calls": {
+        "total": 22
       },
-      "status": "complete",
-      "source": "manual_tabulation"
+      "input_tokens": 578078,
+      "output_tokens": 3528,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 0,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": null,
+      "source": "actual_counts",
+      "status": "cli_close"
+    },
+    {
+      "session_id": "20260418_174055_14037e",
+      "timestamp": "2026-04-18T21:41:12.860147+00:00",
+      "date": "2026-04-18",
+      "model": "ykarout/Qwen3.5-9B-NVFP4",
+      "tool_calls": {
+        "total": 15
+      },
+      "input_tokens": 392102,
+      "output_tokens": 2775,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 0,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "new_session",
+      "title": null,
+      "source": "actual_counts",
+      "status": "new_session"
+    },
+    {
+      "session_id": "20260418_180136_6ee675",
+      "timestamp": "2026-04-18T22:01:36.204254+00:00",
+      "date": "2026-04-18",
+      "model": "ykarout/Qwen3.5-9B-NVFP4",
+      "tool_calls": {
+        "total": 26
+      },
+      "input_tokens": 682357,
+      "output_tokens": 5035,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 0,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "new_session",
+      "title": null,
+      "source": "actual_counts",
+      "status": "new_session"
+    },
+    {
+      "session_id": "20260419_115631_f8a509",
+      "timestamp": "2026-04-19T15:57:16.012385+00:00",
+      "date": "2026-04-19",
+      "model": "unsloth/gemma-4-E2B-it-GGUF:UD-Q4_K_XL",
+      "tool_calls": {
+        "total": 19
+      },
+      "input_tokens": 12908,
+      "output_tokens": 5521,
+      "cache_read_tokens": 456435,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 0,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "new_session",
+      "title": "Requesting a URL for browsing",
+      "source": "actual_counts",
+      "status": "new_session"
+    },
+    {
+      "session_id": "20260429_015847_0fe2f5",
+      "timestamp": "2026-04-29T05:59:17.941386+00:00",
+      "date": "2026-04-29",
+      "model": "Jackrong/Qwopus3.6-27B-v1-preview-GGUF:Q6_K",
+      "tool_calls": {
+        "total": 18
+      },
+      "input_tokens": 15485,
+      "output_tokens": 1812,
+      "cache_read_tokens": 281593,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 19,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": null,
+      "source": "actual_counts",
+      "status": "cli_close"
+    },
+    {
+      "session_id": "20260429_025616_46b818",
+      "timestamp": "2026-04-29T06:57:01.710717+00:00",
+      "date": "2026-04-29",
+      "model": "Jackrong/Qwopus3.6-27B-v1-preview-GGUF:Q6_K",
+      "tool_calls": {
+        "total": 5
+      },
+      "input_tokens": 16494,
+      "output_tokens": 590,
+      "cache_read_tokens": 62934,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 5,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": "Searching for recent news with DuckDuckGo",
+      "source": "actual_counts",
+      "status": "cli_close"
+    },
+    {
+      "session_id": "20260429_101044_8d6c37",
+      "timestamp": "2026-04-29T14:10:59.661185+00:00",
+      "date": "2026-04-29",
+      "model": "Jackrong/Qwopus3.6-27B-v1-preview-GGUF:Q6_K",
+      "tool_calls": {
+        "total": 25
+      },
+      "input_tokens": 39787,
+      "output_tokens": 6366,
+      "cache_read_tokens": 826433,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 26,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "new_session",
+      "title": "Running Model Provider Benchmarks",
+      "source": "actual_counts",
+      "status": "new_session"
+    },
+    {
+      "session_id": "20260429_102147_f3f559",
+      "timestamp": "2026-04-29T14:21:47.534123+00:00",
+      "date": "2026-04-29",
+      "model": "Jackrong/Qwopus3.6-27B-v1-preview-GGUF:Q6_K",
+      "tool_calls": {
+        "total": 8
+      },
+      "input_tokens": 33169,
+      "output_tokens": 3257,
+      "cache_read_tokens": 140319,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 11,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": null,
+      "source": "actual_counts",
+      "status": "cli_close"
+    },
+    {
+      "session_id": "20260430_034850_012e81",
+      "timestamp": "2026-04-30T07:50:24.910260+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 11
+      },
+      "input_tokens": 223474,
+      "output_tokens": 3136,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 13,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": null,
+      "source": "actual_counts",
+      "status": "cli_close"
+    },
+    {
+      "session_id": "20260430_035109_a486cc",
+      "timestamp": "2026-04-30T07:51:09.101314+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 50
+      },
+      "input_tokens": 452043,
+      "output_tokens": 13635,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 50,
+      "estimated_cost_usd": 0.0,
+      "end_reason": null,
+      "title": null,
+      "source": "actual_counts",
+      "status": "unknown"
+    },
+    {
+      "session_id": "20260430_040155_fad9d4",
+      "timestamp": "2026-04-30T08:02:03.909514+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 6
+      },
+      "input_tokens": 107135,
+      "output_tokens": 838,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 7,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": null,
+      "source": "actual_counts",
+      "status": "cli_close"
+    },
+    {
+      "session_id": "20260430_062920_3a0dfc",
+      "timestamp": "2026-04-30T10:29:28.337052+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 5
+      },
+      "input_tokens": 75166,
+      "output_tokens": 820,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 5,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": null,
+      "source": "actual_counts",
+      "status": "cli_close"
+    },
+    {
+      "session_id": "20260430_062946_6d6ef8",
+      "timestamp": "2026-04-30T10:29:46.157082+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 3
+      },
+      "input_tokens": 3918,
+      "output_tokens": 242,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 3,
+      "estimated_cost_usd": 0.0,
+      "end_reason": null,
+      "title": null,
+      "source": "actual_counts",
+      "status": "unknown"
+    },
+    {
+      "session_id": "20260430_064044_f56b5d",
+      "timestamp": "2026-04-30T10:40:48.946384+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 6
+      },
+      "input_tokens": 91828,
+      "output_tokens": 979,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 6,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": null,
+      "source": "actual_counts",
+      "status": "cli_close"
+    },
+    {
+      "session_id": "20260430_064102_8ffa81",
+      "timestamp": "2026-04-30T10:41:02.836026+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 20
+      },
+      "input_tokens": 76539,
+      "output_tokens": 6101,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 20,
+      "estimated_cost_usd": 0.0,
+      "end_reason": null,
+      "title": null,
+      "source": "actual_counts",
+      "status": "unknown"
+    },
+    {
+      "session_id": "20260430_064338_50dc2a",
+      "timestamp": "2026-04-30T10:44:17.844726+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 5
+      },
+      "input_tokens": 94908,
+      "output_tokens": 1462,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 6,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": null,
+      "source": "actual_counts",
+      "status": "cli_close"
+    },
+    {
+      "session_id": "20260430_064431_285c75",
+      "timestamp": "2026-04-30T10:44:31.804778+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 13
+      },
+      "input_tokens": 52572,
+      "output_tokens": 7286,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 14,
+      "estimated_cost_usd": 0.0,
+      "end_reason": null,
+      "title": null,
+      "source": "actual_counts",
+      "status": "unknown"
+    },
+    {
+      "session_id": "20260430_072053_a1f2fc",
+      "timestamp": "2026-04-30T11:21:00.562281+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 23
+      },
+      "input_tokens": 555807,
+      "output_tokens": 10517,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 19,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "new_session",
+      "title": null,
+      "source": "actual_counts",
+      "status": "new_session"
+    },
+    {
+      "session_id": "20260430_073200_81c3f8",
+      "timestamp": "2026-04-30T11:32:00.888088+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 60
+      },
+      "input_tokens": 2661581,
+      "output_tokens": 15974,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 61,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "compression",
+      "title": null,
+      "source": "actual_counts",
+      "status": "compression"
+    },
+    {
+      "session_id": "20260430_074544_ba999a",
+      "timestamp": "2026-04-30T11:45:44.315634+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 67
+      },
+      "input_tokens": 2910896,
+      "output_tokens": 28677,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 66,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "compression",
+      "title": null,
+      "source": "actual_counts",
+      "status": "compression"
+    },
+    {
+      "session_id": "20260430_081446_a35c99",
+      "timestamp": "2026-04-30T12:14:46.224505+00:00",
+      "date": "2026-04-30",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 27
+      },
+      "input_tokens": 439821,
+      "output_tokens": 2809,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 7,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "compression",
+      "title": null,
+      "source": "actual_counts",
+      "status": "compression"
     }
   ],
-  "daysTrackedSet": {
-    "2026-04-30": true
-  },
-  "lastUpdated": "2026-04-30T12:13:40.341372+00:00",
-  "notes": "Manually tabulated metrics. First session was cron-collected (hardcoded). This session is manually counted from active state and conversation history."
+  "collectionStarted": "2026-04-30T00:00:00Z",
+  "collectionMethod": "actual_counts",
+  "lastUpdated": "2026-04-30T12:19:59.358117+00:00"
 }
