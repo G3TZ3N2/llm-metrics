@@ -1,13 +1,13 @@
 {
-  "collectionStarted": "2025-04-30T00:00:00Z",
-  "totalSessions": 1,
-  "totalTokens": 700000,
+  "collectionStarted": "2026-04-30T00:00:00Z",
+  "totalSessions": 2,
+  "totalTokens": 1259000,
   "daysTracked": 1,
-  "totalToolCalls": 90,
+  "totalToolCalls": 170,
   "byModel": {
     "custom/RedHatAI-Qwen3.6-35B-A3B-NVFP4": {
-      "sessions": 1,
-      "tokens": 700000
+      "sessions": 2,
+      "tokens": 1259000
     }
   },
   "sessions": [
@@ -38,9 +38,45 @@
         "hermes_agent": true
       },
       "status": "complete"
+    },
+    {
+      "session_id": "20260430_121340_manual",
+      "timestamp": "2026-04-30T12:13:40.341372+00:00",
+      "date": "2026-04-30",
+      "model": "custom/RedHatAI-Qwen3.6-35B-A3B-NVFP4",
+      "model_provider": "custom",
+      "tool_calls": {
+        "skill_view": 4,
+        "search_files": 2,
+        "todo": 2,
+        "terminal": 16,
+        "process": 1,
+        "read_file": 5,
+        "session_search": 2,
+        "execute_code": 6,
+        "browser": 25,
+        "skill": 3,
+        "memory": 3,
+        "patch": 2,
+        "send_message": 0,
+        "cronjob": 1,
+        "gh": 8
+      },
+      "session_tokens": 559000,
+      "total_tokens_generated": 129000,
+      "environment": {
+        "python_version": "Python 3.11.15",
+        "node_version": "v20.20.2",
+        "platform": "Docker/Linux",
+        "hermes_agent": true
+      },
+      "status": "complete",
+      "source": "manual_tabulation"
     }
   ],
   "daysTrackedSet": {
     "2026-04-30": true
-  }
+  },
+  "lastUpdated": "2026-04-30T12:13:40.341372+00:00",
+  "notes": "Manually tabulated metrics. First session was cron-collected (hardcoded). This session is manually counted from active state and conversation history."
 }
