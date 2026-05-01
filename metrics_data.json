@@ -544,13 +544,13 @@
       "reasoning_tokens": 0,
       "api_call_count": 18,
       "estimated_cost_usd": 0.0,
-      "end_reason": null,
+      "end_reason": "cli_close",
       "title": null,
       "source": "actual_counts",
-      "status": "unknown"
+      "status": "cli_close"
     }
   ],
   "collectionStarted": "2026-04-30T00:00:00Z",
   "collectionMethod": "actual_counts",
-  "lastUpdated": "2026-05-01T00:03:57.153122+00:00"
+  "lastUpdated": "2026-05-01T06:04:50.189816+00:00"
 }
