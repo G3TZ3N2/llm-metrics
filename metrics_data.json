@@ -1,14 +1,14 @@
 {
-  "totalSessions": 24,
-  "totalToolCalls": 497,
-  "totalInputTokens": 10705551,
-  "totalOutputTokens": 131590,
+  "totalSessions": 25,
+  "totalToolCalls": 506,
+  "totalInputTokens": 10847226,
+  "totalOutputTokens": 134019,
   "totalCacheReadTokens": 1767714,
   "totalCacheWriteTokens": 0,
   "totalReasoningTokens": 0,
-  "totalApiCalls": 356,
-  "tokensGenerated": 131590,
-  "daysTracked": 5,
+  "totalApiCalls": 363,
+  "tokensGenerated": 134019,
+  "daysTracked": 6,
   "byModel": {
     "ykarout/Qwen3.5-9B-NVFP4": {
       "sessions": 5,
@@ -29,10 +29,10 @@
       "output_tokens": 12025
     },
     "RedHatAI/Qwen3.6-35B-A3B-NVFP4": {
-      "sessions": 14,
-      "tool_calls": 340,
-      "input_tokens": 8675788,
-      "output_tokens": 99974
+      "sessions": 15,
+      "tool_calls": 349,
+      "input_tokens": 8817463,
+      "output_tokens": 102403
     }
   },
   "byDay": {
@@ -65,6 +65,12 @@
       "tool_calls": 340,
       "input_tokens": 8675788,
       "output_tokens": 99974
+    },
+    "2026-05-01": {
+      "sessions": 1,
+      "tool_calls": 9,
+      "input_tokens": 141675,
+      "output_tokens": 2429
     }
   },
   "toolCallBreakdown": {},
@@ -548,9 +554,29 @@
       "title": null,
       "source": "actual_counts",
       "status": "cli_close"
+    },
+    {
+      "session_id": "20260501_015909_ac9202",
+      "timestamp": "2026-05-01T11:55:47.169928+00:00",
+      "date": "2026-05-01",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 9
+      },
+      "input_tokens": 141675,
+      "output_tokens": 2429,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 7,
+      "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": null,
+      "source": "actual_counts",
+      "status": "cli_close"
     }
   ],
   "collectionStarted": "2026-04-30T00:00:00Z",
   "collectionMethod": "actual_counts",
-  "lastUpdated": "2026-05-01T06:04:50.189816+00:00"
+  "lastUpdated": "2026-05-01T12:05:07.675243+00:00"
 }
