@@ -1,14 +1,14 @@
 {
-  "totalSessions": 25,
-  "totalToolCalls": 506,
-  "totalInputTokens": 10847226,
-  "totalOutputTokens": 134019,
+  "totalSessions": 29,
+  "totalToolCalls": 588,
+  "totalInputTokens": 13670537,
+  "totalOutputTokens": 247169,
   "totalCacheReadTokens": 1767714,
   "totalCacheWriteTokens": 0,
   "totalReasoningTokens": 0,
-  "totalApiCalls": 363,
-  "tokensGenerated": 134019,
-  "daysTracked": 6,
+  "totalApiCalls": 444,
+  "tokensGenerated": 247169,
+  "daysTracked": 7,
   "byModel": {
     "ykarout/Qwen3.5-9B-NVFP4": {
       "sessions": 5,
@@ -29,10 +29,10 @@
       "output_tokens": 12025
     },
     "RedHatAI/Qwen3.6-35B-A3B-NVFP4": {
-      "sessions": 15,
-      "tool_calls": 349,
-      "input_tokens": 8817463,
-      "output_tokens": 102403
+      "sessions": 19,
+      "tool_calls": 431,
+      "input_tokens": 11640774,
+      "output_tokens": 215553
     }
   },
   "byDay": {
@@ -71,6 +71,12 @@
       "tool_calls": 9,
       "input_tokens": 141675,
       "output_tokens": 2429
+    },
+    "2026-05-02": {
+      "sessions": 4,
+      "tool_calls": 82,
+      "input_tokens": 2823311,
+      "output_tokens": 113150
     }
   },
   "toolCallBreakdown": {},
@@ -574,9 +580,89 @@
       "title": null,
       "source": "actual_counts",
       "status": "cli_close"
+    },
+    {
+      "session_id": "20260502_123219_b56161",
+      "timestamp": "2026-05-02T16:40:35.707632+00:00",
+      "date": "2026-05-02",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 31
+      },
+      "input_tokens": 1882775,
+      "output_tokens": 46113,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 38,
+      "estimated_cost_usd": 0.0,
+      "end_reason": null,
+      "title": null,
+      "source": "actual_counts",
+      "status": "unknown"
+    },
+    {
+      "session_id": "20260502_125505_62f286",
+      "timestamp": "2026-05-02T16:55:05.936168+00:00",
+      "date": "2026-05-02",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 15
+      },
+      "input_tokens": 228123,
+      "output_tokens": 16540,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 16,
+      "estimated_cost_usd": 0.0,
+      "end_reason": null,
+      "title": null,
+      "source": "actual_counts",
+      "status": "unknown"
+    },
+    {
+      "session_id": "20260502_131244_ede1cc",
+      "timestamp": "2026-05-02T17:12:44.629591+00:00",
+      "date": "2026-05-02",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 26
+      },
+      "input_tokens": 582534,
+      "output_tokens": 27317,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 16,
+      "estimated_cost_usd": 0.0,
+      "end_reason": null,
+      "title": null,
+      "source": "actual_counts",
+      "status": "unknown"
+    },
+    {
+      "session_id": "20260502_134401_756339",
+      "timestamp": "2026-05-02T17:44:01.874141+00:00",
+      "date": "2026-05-02",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 10
+      },
+      "input_tokens": 129879,
+      "output_tokens": 23180,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 11,
+      "estimated_cost_usd": 0.0,
+      "end_reason": null,
+      "title": null,
+      "source": "actual_counts",
+      "status": "unknown"
     }
   ],
   "collectionStarted": "2026-04-30T00:00:00Z",
   "collectionMethod": "actual_counts",
-  "lastUpdated": "2026-05-02T06:05:52.147128+00:00"
+  "lastUpdated": "2026-05-02T18:12:07.968360+00:00"
 }
