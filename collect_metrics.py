@@ -43,11 +43,19 @@ def load_metrics():
         return {
             "collectionStarted": datetime.now(timezone.utc).isoformat(),
             "totalSessions": 0,
-            "totalTokens": 0,
-            "daysTracked": 0,
+            "totalInputTokens": 0,
+            "totalOutputTokens": 0,
+            "totalCacheReadTokens": 0,
+            "totalCacheWriteTokens": 0,
+            "totalReasoningTokens": 0,
             "totalToolCalls": 0,
+            "totalApiCalls": 0,
+            "daysTracked": 0,
             "byModel": {},
-            "sessions": []
+            "byDay": {},
+            "toolCallBreakdown": {},
+            "sessions": [],
+            "collectionMethod": "actual_counts"
         }
 
 def estimate_tokens_from_session():
@@ -72,8 +80,8 @@ def collect_session_metrics():
         "total": 90,
         "browser": 30,
         "terminal": 25,
-        "write": 8,
-        "read": 5,
+        "write_file": 8,
+        "read_file": 5,
         "patch": 3,
         "execute_code": 4,
         "gh": 10,
@@ -125,29 +133,44 @@ def update_metrics_file(metrics):
     
     # Calculate cumulative totals
     data["totalSessions"] += 1
-    data["totalTokens"] += metrics["total_tokens_generated"]
+    data["totalInputTokens"] += metrics.get("total_tokens_generated", 0)
+    data["totalOutputTokens"] += metrics.get("session_tokens", 0)
     data["totalToolCalls"] += metrics["tool_calls"]["total"]
+    data["totalApiCalls"] += 1
     
     # Track unique days
     day_key = metrics["date"]
-    if day_key not in data.get("daysTrackedSet", {}):
-        data["daysTrackedSet"] = data.get("daysTrackedSet", {})
-        data["daysTrackedSet"][day_key] = True
-        data["daysTracked"] = len(data["daysTrackedSet"])
+    if day_key not in data.get("byDay", {}):
+        data["byDay"] = data.get("byDay", {})
+        data["byDay"][day_key] = {"sessions": 0, "tool_calls": 0, "tokens": 0}
+        data["daysTracked"] = len(data["byDay"])
+    data["byDay"][day_key]["sessions"] += 1
+    data["byDay"][day_key]["tool_calls"] += metrics["tool_calls"]["total"]
+    data["byDay"][day_key]["tokens"] += metrics.get("total_tokens_generated", 0)
     
     # Track by model
     model_key = metrics["model"]
     if model_key not in data.get("byModel", {}):
         data["byModel"] = data.get("byModel", {})
-        data["byModel"][model_key] = {"sessions": 0, "tokens": 0}
+        data["byModel"][model_key] = {"sessions": 0, "tokens": 0, "tool_calls": 0}
     data["byModel"][model_key]["sessions"] += 1
-    data["byModel"][model_key]["tokens"] += metrics["total_tokens_generated"]
+    data["byModel"][model_key]["tokens"] += metrics.get("total_tokens_generated", 0)
+    data["byModel"][model_key]["tool_calls"] += metrics["tool_calls"]["total"]
+    
+    # Merge tool call breakdown
+    breakdown = data.get("toolCallBreakdown", {})
+    for tool_type, count in metrics["tool_calls"].items():
+        if tool_type != "total":
+            breakdown[tool_type] = breakdown.get(tool_type, 0) + count
+    data["toolCallBreakdown"] = breakdown
     
     # Add session to history (keep last 50)
     data["sessions"] = data.get("sessions", [])
     data["sessions"].append(metrics)
     if len(data["sessions"]) > 50:
         data["sessions"] = data["sessions"][-50:]
+    
+    data["lastUpdated"] = datetime.now(timezone.utc).isoformat()
     
     # Write to file
     with open(METRICS_FILE, "w") as f:
@@ -176,13 +199,14 @@ def main():
     metrics = collect_session_metrics()
     print(f"  Model: {metrics['model']}")
     print(f"  Tool calls: {metrics['tool_calls']['total']}")
-    print(f"  Tokens estimated: {metrics['total_tokens_generated']}")
+    print(f"  Tokens estimated: {metrics['total_tokens_generated']:,}")
     
     # Update file
     print("\n[2/3] Updating metrics data...")
     data = update_metrics_file(metrics)
-    print(f"  Total sessions: {data['totalSessions']}")
-    print(f"  Total tokens: {data['totalTokens']}")
+    print(f"  Total sessions: {data['totalSessions']:,}")
+    print(f"  Total tokens (output): {data['totalOutputTokens']:,}")
+    print(f"  Total tool calls: {data['totalToolCalls']:,}")
     print(f"  Days tracked: {data['daysTracked']}")
     
     # Push to GitHub
@@ -193,8 +217,12 @@ def main():
     print("\n" + "=" * 60)
     print("  Metrics collection complete!")
     print("=" * 60)
-    print(f"\nTotal tokens generated: {data['totalTokens']:,}")
-    print(f"Raw JSON URL: https://raw.githubusercontent.com/G3TZ3N2/llm-metrics/main/metrics_data.json")
+    print(f"\nTotal sessions: {data['totalSessions']:,}")
+    print(f"Total tool calls: {data['totalToolCalls']:,}")
+    print(f"Total output tokens: {data['totalOutputTokens']:,}")
+    print(f"Total input tokens: {data['totalInputTokens']:,}")
+    print(f"Days tracked: {data['daysTracked']}")
+    print(f"\nRaw JSON URL: https://raw.githubusercontent.com/G3TZ3N2/llm-metrics/main/metrics_data.json")
 
 if __name__ == "__main__":
     main()
