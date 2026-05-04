@@ -1,14 +1,14 @@
 {
-  "totalSessions": 51,
-  "totalToolCalls": 1007,
-  "totalInputTokens": 26841955,
-  "totalOutputTokens": 563899,
+  "totalSessions": 52,
+  "totalToolCalls": 1023,
+  "totalInputTokens": 27059727,
+  "totalOutputTokens": 566171,
   "totalCacheReadTokens": 1767714,
   "totalCacheWriteTokens": 0,
   "totalReasoningTokens": 0,
-  "totalApiCalls": 753,
-  "tokensGenerated": 563899,
-  "daysTracked": 8,
+  "totalApiCalls": 762,
+  "tokensGenerated": 566171,
+  "daysTracked": 9,
   "byModel": {
     "ykarout/Qwen3.5-9B-NVFP4": {
       "sessions": 5,
@@ -29,10 +29,10 @@
       "output_tokens": 12025
     },
     "RedHatAI/Qwen3.6-35B-A3B-NVFP4": {
-      "sessions": 41,
-      "tool_calls": 850,
-      "input_tokens": 24812192,
-      "output_tokens": 532283
+      "sessions": 42,
+      "tool_calls": 866,
+      "input_tokens": 25029964,
+      "output_tokens": 534555
     }
   },
   "byDay": {
@@ -83,6 +83,12 @@
       "tool_calls": 110,
       "input_tokens": 4580721,
       "output_tokens": 45225
+    },
+    "2026-05-04": {
+      "sessions": 1,
+      "tool_calls": 16,
+      "input_tokens": 217772,
+      "output_tokens": 2272
     }
   },
   "toolCallBreakdown": {
@@ -91,13 +97,13 @@
     "browser_snapshot": 21,
     "search_files": 44,
     "browser_console": 6,
-    "skill_view": 42,
-    "terminal": 364,
+    "skill_view": 46,
+    "terminal": 390,
     "browser_vision": 4,
     "skills_list": 2,
     "delegate_task": 29,
     "search": 3,
-    "execute_code": 150,
+    "execute_code": 154,
     "clarify": 3,
     "browser_back": 13,
     "browser_click": 22,
@@ -106,8 +112,8 @@
     "todo": 35,
     "process": 89,
     "write_file": 39,
-    "read_file": 60,
-    "patch": 21,
+    "read_file": 61,
+    "patch": 22,
     "cronjob": 10,
     "web": 2,
     "skill_manage": 14,
@@ -1131,6 +1137,26 @@
       "reasoning_tokens": 0,
       "api_call_count": 44,
       "estimated_cost_usd": 0.0,
+      "end_reason": "cli_close",
+      "title": null,
+      "source": "actual_counts",
+      "status": "cli_close"
+    },
+    {
+      "session_id": "20260504_071842_703fec",
+      "timestamp": "2026-05-04T11:20:04.990558+00:00",
+      "date": "2026-05-04",
+      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+      "tool_calls": {
+        "total": 16
+      },
+      "input_tokens": 217772,
+      "output_tokens": 2272,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "api_call_count": 9,
+      "estimated_cost_usd": 0.0,
       "end_reason": null,
       "title": null,
       "source": "actual_counts",
@@ -1139,5 +1165,5 @@
   ],
   "collectionStarted": "2026-04-30T00:00:00Z",
   "collectionMethod": "actual_counts",
-  "lastUpdated": "2026-05-04T00:16:21.354913+00:00"
+  "lastUpdated": "2026-05-04T12:17:31.153595+00:00"
 }
