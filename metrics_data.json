@@ -1,14 +1,14 @@
 {
-  "totalSessions": 26,
-  "totalToolCalls": 596,
-  "totalInputTokens": 11547226,
-  "totalOutputTokens": 834019,
+  "totalSessions": 27,
+  "totalToolCalls": 686,
+  "totalInputTokens": 12247226,
+  "totalOutputTokens": 1534019,
   "totalCacheReadTokens": 1767714,
   "totalCacheWriteTokens": 0,
   "totalReasoningTokens": 0,
-  "totalApiCalls": 364,
+  "totalApiCalls": 365,
   "tokensGenerated": 134019,
-  "daysTracked": 7,
+  "daysTracked": 8,
   "byModel": {
     "ykarout/Qwen3.5-9B-NVFP4": {
       "sessions": 5,
@@ -35,9 +35,9 @@
       "output_tokens": 102403
     },
     "custom/RedHatAI-Qwen3.6-35B-A3B-NVFP4": {
-      "sessions": 1,
-      "tokens": 700000,
-      "tool_calls": 90
+      "sessions": 2,
+      "tokens": 1400000,
+      "tool_calls": 180
     }
   },
   "byDay": {
@@ -81,18 +81,23 @@
       "sessions": 1,
       "tool_calls": 90,
       "tokens": 700000
+    },
+    "2026-05-04": {
+      "sessions": 1,
+      "tool_calls": 90,
+      "tokens": 700000
     }
   },
   "toolCallBreakdown": {
-    "browser": 30,
-    "terminal": 25,
-    "write_file": 8,
-    "read_file": 5,
-    "patch": 3,
-    "execute_code": 4,
-    "gh": 10,
-    "memory": 2,
-    "skill": 3
+    "browser": 60,
+    "terminal": 50,
+    "write_file": 16,
+    "read_file": 10,
+    "patch": 6,
+    "execute_code": 8,
+    "gh": 20,
+    "memory": 4,
+    "skill": 6
   },
   "sessions": [
     {
@@ -622,9 +627,37 @@
         "hermes_agent": true
       },
       "status": "complete"
+    },
+    {
+      "session_id": "20260504_061647",
+      "timestamp": "2026-05-04T06:16:47.611586+00:00",
+      "date": "2026-05-04",
+      "model": "custom/RedHatAI-Qwen3.6-35B-A3B-NVFP4",
+      "model_provider": "custom",
+      "tool_calls": {
+        "total": 90,
+        "browser": 30,
+        "terminal": 25,
+        "write_file": 8,
+        "read_file": 5,
+        "patch": 3,
+        "execute_code": 4,
+        "gh": 10,
+        "memory": 2,
+        "skill": 3
+      },
+      "session_tokens": 700000,
+      "total_tokens_generated": 700000,
+      "environment": {
+        "python_version": "Python 3.11.15",
+        "node_version": "v20.20.2",
+        "platform": "Docker/Linux",
+        "hermes_agent": true
+      },
+      "status": "complete"
     }
   ],
   "collectionStarted": "2026-04-30T00:00:00Z",
   "collectionMethod": "actual_counts",
-  "lastUpdated": "2026-05-03T12:14:10.164726+00:00"
+  "lastUpdated": "2026-05-04T06:16:47.612339+00:00"
 }
