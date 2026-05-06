@@ -123,10 +123,12 @@ def update_metrics_file(metrics):
     """Update the metrics data file with new session data."""
     data = load_metrics()
     
-    # Calculate cumulative totals
-    data["totalSessions"] += 1
+    # Calculate cumulative totals (handle both old and new field names)
+    data["totalSessions"] = data.get("totalSessions", 0) + 1
+    if "totalTokens" not in data:
+        data["totalTokens"] = data.get("tokensGenerated", 0)
     data["totalTokens"] += metrics["total_tokens_generated"]
-    data["totalToolCalls"] += metrics["tool_calls"]["total"]
+    data["totalToolCalls"] = data.get("totalToolCalls", 0) + metrics["tool_calls"]["total"]
     
     # Track unique days
     day_key = metrics["date"]

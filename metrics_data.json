@@ -1,6 +1,6 @@
 {
-  "totalSessions": 52,
-  "totalToolCalls": 1023,
+  "totalSessions": 53,
+  "totalToolCalls": 1113,
   "totalInputTokens": 27059727,
   "totalOutputTokens": 566171,
   "totalCacheReadTokens": 1767714,
@@ -8,7 +8,7 @@
   "totalReasoningTokens": 0,
   "totalApiCalls": 762,
   "tokensGenerated": 566171,
-  "daysTracked": 9,
+  "daysTracked": 1,
   "byModel": {
     "ykarout/Qwen3.5-9B-NVFP4": {
       "sessions": 5,
@@ -33,6 +33,10 @@
       "tool_calls": 866,
       "input_tokens": 25029964,
       "output_tokens": 534555
+    },
+    "custom/RedHatAI-Qwen3.6-35B-A3B-NVFP4": {
+      "sessions": 1,
+      "tokens": 700000
     }
   },
   "byDay": {
@@ -124,66 +128,6 @@
     "send_message": 12
   },
   "sessions": [
-    {
-      "session_id": "20260416_211235_f6e824",
-      "timestamp": "2026-04-17T01:12:49.062710+00:00",
-      "date": "2026-04-17",
-      "model": "ykarout/Qwen3.5-9B-NVFP4",
-      "tool_calls": {
-        "total": 6
-      },
-      "input_tokens": 84972,
-      "output_tokens": 485,
-      "cache_read_tokens": 0,
-      "cache_write_tokens": 0,
-      "reasoning_tokens": 0,
-      "api_call_count": 0,
-      "estimated_cost_usd": 0.0,
-      "end_reason": "cli_close",
-      "title": null,
-      "source": "actual_counts",
-      "status": "cli_close"
-    },
-    {
-      "session_id": "20260416_211307_810dae",
-      "timestamp": "2026-04-17T01:13:07.622063+00:00",
-      "date": "2026-04-17",
-      "model": "ykarout/Qwen3.5-9B-NVFP4",
-      "tool_calls": {
-        "total": 13
-      },
-      "input_tokens": 174411,
-      "output_tokens": 2247,
-      "cache_read_tokens": 0,
-      "cache_write_tokens": 0,
-      "reasoning_tokens": 0,
-      "api_call_count": 0,
-      "estimated_cost_usd": 0.0,
-      "end_reason": null,
-      "title": null,
-      "source": "actual_counts",
-      "status": "unknown"
-    },
-    {
-      "session_id": "20260416_233905_06bbf5",
-      "timestamp": "2026-04-17T03:39:09.989751+00:00",
-      "date": "2026-04-17",
-      "model": "ykarout/Qwen3.5-9B-NVFP4",
-      "tool_calls": {
-        "total": 22
-      },
-      "input_tokens": 578078,
-      "output_tokens": 3528,
-      "cache_read_tokens": 0,
-      "cache_write_tokens": 0,
-      "reasoning_tokens": 0,
-      "api_call_count": 0,
-      "estimated_cost_usd": 0.0,
-      "end_reason": "cli_close",
-      "title": null,
-      "source": "actual_counts",
-      "status": "cli_close"
-    },
     {
       "session_id": "20260418_174055_14037e",
       "timestamp": "2026-04-18T21:41:12.860147+00:00",
@@ -1163,9 +1107,41 @@
       "title": null,
       "source": "actual_counts",
       "status": "cli_close"
+    },
+    {
+      "session_id": "20260506_222036",
+      "timestamp": "2026-05-06T22:20:36.038761+00:00",
+      "date": "2026-05-06",
+      "model": "custom/RedHatAI-Qwen3.6-35B-A3B-NVFP4",
+      "model_provider": "custom",
+      "tool_calls": {
+        "total": 90,
+        "browser": 30,
+        "terminal": 25,
+        "write": 8,
+        "read": 5,
+        "patch": 3,
+        "execute_code": 4,
+        "gh": 10,
+        "memory": 2,
+        "skill": 3
+      },
+      "session_tokens": 700000,
+      "total_tokens_generated": 700000,
+      "environment": {
+        "python_version": "Python 3.11.15",
+        "node_version": "v20.20.2",
+        "platform": "Docker/Linux",
+        "hermes_agent": true
+      },
+      "status": "complete"
     }
   ],
   "collectionStarted": "2026-04-30T00:00:00Z",
   "collectionMethod": "actual_counts",
-  "lastUpdated": "2026-05-06T10:17:32.245420+00:00"
+  "lastUpdated": "2026-05-06T10:17:32.245420+00:00",
+  "totalTokens": 1266171,
+  "daysTrackedSet": {
+    "2026-05-06": true
+  }
 }
