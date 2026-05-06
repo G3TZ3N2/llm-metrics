@@ -92,34 +92,36 @@
     }
   },
   "toolCallBreakdown": {
-    "web_search": 19,
-    "browser_navigate": 95,
-    "browser_snapshot": 21,
-    "search_files": 44,
+    "web_search": 21,
+    "browser_navigate": 369,
+    "browser_snapshot": 40,
+    "search_files": 49,
     "browser_console": 6,
-    "skill_view": 46,
-    "terminal": 390,
-    "browser_vision": 4,
+    "skill_view": 76,
+    "terminal": 448,
+    "browser_vision": 6,
     "skills_list": 2,
-    "delegate_task": 29,
+    "delegate_task": 34,
     "search": 3,
-    "execute_code": 154,
+    "execute_code": 164,
     "clarify": 3,
     "browser_back": 13,
-    "browser_click": 22,
-    "browser_scroll": 8,
+    "browser_click": 44,
+    "browser_scroll": 104,
     "session_search": 9,
-    "todo": 35,
-    "process": 89,
-    "write_file": 39,
-    "read_file": 61,
-    "patch": 22,
-    "cronjob": 10,
+    "todo": 40,
+    "process": 90,
+    "write_file": 42,
+    "read_file": 65,
+    "patch": 24,
+    "cronjob": 16,
     "web": 2,
     "skill_manage": 14,
     "duckduckgo-search": 4,
     "memory": 3,
-    "browser_press": 1
+    "browser_press": 1,
+    "browser_type": 7,
+    "send_message": 12
   },
   "sessions": [
     {
@@ -1157,13 +1159,13 @@
       "reasoning_tokens": 0,
       "api_call_count": 9,
       "estimated_cost_usd": 0.0,
-      "end_reason": null,
+      "end_reason": "cli_close",
       "title": null,
       "source": "actual_counts",
-      "status": "unknown"
+      "status": "cli_close"
     }
   ],
   "collectionStarted": "2026-04-30T00:00:00Z",
   "collectionMethod": "actual_counts",
-  "lastUpdated": "2026-05-04T12:17:31.153595+00:00"
+  "lastUpdated": "2026-05-06T04:17:18.175093+00:00"
 }
