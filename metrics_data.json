@@ -97,8 +97,8 @@
     "browser_snapshot": 40,
     "search_files": 49,
     "browser_console": 6,
-    "skill_view": 76,
-    "terminal": 448,
+    "skill_view": 77,
+    "terminal": 454,
     "browser_vision": 6,
     "skills_list": 2,
     "delegate_task": 34,
@@ -1167,5 +1167,5 @@
   ],
   "collectionStarted": "2026-04-30T00:00:00Z",
   "collectionMethod": "actual_counts",
-  "lastUpdated": "2026-05-06T04:17:18.175093+00:00"
+  "lastUpdated": "2026-05-06T10:17:32.245420+00:00"
 }
