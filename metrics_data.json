@@ -1,6 +1,6 @@
 {
-  "totalSessions": 71,
-  "totalToolCalls": 2733,
+  "totalSessions": 72,
+  "totalToolCalls": 2823,
   "totalInputTokens": 27059727,
   "totalOutputTokens": 566171,
   "totalCacheReadTokens": 1767714,
@@ -35,8 +35,8 @@
       "output_tokens": 534555
     },
     "custom/RedHatAI-Qwen3.6-35B-A3B-NVFP4": {
-      "sessions": 19,
-      "tokens": 13300000
+      "sessions": 20,
+      "tokens": 14000000
     }
   },
   "byDay": {
@@ -128,26 +128,6 @@
     "send_message": 12
   },
   "sessions": [
-    {
-      "session_id": "20260430_074544_ba999a",
-      "timestamp": "2026-04-30T11:45:44.315634+00:00",
-      "date": "2026-04-30",
-      "model": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
-      "tool_calls": {
-        "total": 67
-      },
-      "input_tokens": 2910896,
-      "output_tokens": 28677,
-      "cache_read_tokens": 0,
-      "cache_write_tokens": 0,
-      "reasoning_tokens": 0,
-      "api_call_count": 66,
-      "estimated_cost_usd": 0.0,
-      "end_reason": "compression",
-      "title": null,
-      "source": "actual_counts",
-      "status": "compression"
-    },
     {
       "session_id": "20260430_081446_a35c99",
       "timestamp": "2026-04-30T12:14:46.224505+00:00",
@@ -1279,12 +1259,40 @@
         "hermes_agent": true
       },
       "status": "complete"
+    },
+    {
+      "session_id": "20260513_231532",
+      "timestamp": "2026-05-13T23:15:32.192982+00:00",
+      "date": "2026-05-13",
+      "model": "custom/RedHatAI-Qwen3.6-35B-A3B-NVFP4",
+      "model_provider": "custom",
+      "tool_calls": {
+        "total": 90,
+        "browser": 30,
+        "terminal": 25,
+        "write": 8,
+        "read": 5,
+        "patch": 3,
+        "execute_code": 4,
+        "gh": 10,
+        "memory": 2,
+        "skill": 3
+      },
+      "session_tokens": 700000,
+      "total_tokens_generated": 700000,
+      "environment": {
+        "python_version": "Python 3.11.15",
+        "node_version": "v20.20.2",
+        "platform": "Docker/Linux",
+        "hermes_agent": true
+      },
+      "status": "complete"
     }
   ],
   "collectionStarted": "2026-04-30T00:00:00Z",
   "collectionMethod": "actual_counts",
   "lastUpdated": "2026-05-06T10:17:32.245420+00:00",
-  "totalTokens": 13866171,
+  "totalTokens": 14566171,
   "daysTrackedSet": {
     "2026-05-06": true,
     "2026-05-07": true,
